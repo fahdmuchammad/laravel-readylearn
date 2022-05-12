@@ -2,7 +2,7 @@
 @extends('layouts.app')
   
   @section('content')
-  <div class="body" style="background-image: url({{asset('assets/images/awan.svg')}}); height: 100%; background-repeat: no-repeat; background-size: cover;">
+  <div class="body" style="padding-bottom:6rem; background-image: url({{asset('assets/images/awan.svg')}}); height: 100%; background-repeat: no-repeat; background-size: cover;">
   <div class="container">
     <div class="row justify-content-center">
       <div>
@@ -28,7 +28,7 @@
                         <li>Priority email support</li>
                         <li>Help center access</li> --}}
                         @if($hasil->count()==0) {{-- jika belum membeli--}} 
-                        <h1 class="card-title pricing-card-title">RP. {{number_format($data->price,2)}}<small class="text-muted">/unlimited</small></h1>
+                        <h1 class="card-title pricing-card-title">RP. {{number_format($data->price,2)}}<small class="text-muted"><br>/unlimited</small></h1>
                       <ul class="list-unstyled mt-3 mb-4">
                         @endif 
                         <li style="list-style-type: none">{{$data->description}}</li>   

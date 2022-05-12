@@ -16,8 +16,8 @@
                           </ul>
                       </div>
                   @endif --}}
-                <h1>Mau Belajar apa?</h1>
-                <p>
+                <h1 class="text-center">Mau Belajar apa?</h1>
+                <p class="pl-3">
                   {{Auth::user()->name}} ingin belajar 
                 </p>
                 <div class="attendee">
@@ -34,13 +34,13 @@
                       
                           <tr>
                               <td class="align-middle">
-                                
+                                {{Auth::user()->name}}
                               </td>
                               <td class="align-middle">
-                                  
+                                {{$transaction->package->name}}
                               </td>
                               <td class="align-middle">
-                                  
+                                {{$transaction->gross_amount}}
                               </td>
                               <td class="align-middle">
                                   
@@ -54,7 +54,7 @@
                       
                           <tr>
                               <td colspan="6" class="text-center">
-                                  No Visitor
+                                  
                               </td>
                           </tr>
                       
@@ -74,9 +74,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <th width="50%">Additional VISA</th>
+                    <th width="50%">Transaction ID</th>
                     <td width="50%" class="text-right">
-                      
+                      {{$transaction->name}}
                     </td>
                   </tr>
                   <tr>
@@ -86,7 +86,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th width="50%">Sub Total</th>
+                    <th width="50%">User ID</th>
                     <td width="50%" class="text-right">
                       {{Auth::user()->id}}
                     </td>
@@ -95,7 +95,7 @@
                     <th width="50%">Total (+Unique)</th>
                     <td width="50%" class="text-right text-total">
                       <div class="text-blue">
-                        {{number_format($transaction->gross_amount + $transaction->id,2)}}
+                        {{number_format($transaction->gross_amount,2)}}
                       </div>
                       <span class="text-orange"></span>
                     </td>
@@ -115,7 +115,7 @@
                       class="bank-image"
                     />
                     <div class="description">
-                      <h3>PT Nomads ID</h3>
+                      <h3>PT Readylearn</h3>
                       <p>
                         0881 8829 8800
                         <br />
@@ -131,7 +131,7 @@
                       class="bank-image"
                     />
                     <div class="description">
-                      <h3>PT Nomads ID</h3>
+                      <h3>PT Readylearn</h3>
                       <p>
                         0899 8501 7888
                         <br />
@@ -142,11 +142,29 @@
                   </div>
                 </div>
               </div>
+              <form action="{{route('paket.konfirmasi')}}" method="POST" enctype="multipart/form-data">
+
+                @csrf
+                <div class="form-group">
+                <label for="">Photo</label>
+                <div class="input-group">
+                    <input type="file" name="photo" class="form-control">
+                </div>
+            </div>
+            @if ($errors->has('photo'))
+                <ul class="alert alert-danger">
+                    @foreach ($errors->get('photo') as $error)
+                        <span>{{ $error }}</span>
+                    @endforeach
+                </ul>
+            @endif
               <div class="join-container">
-                <a href="" class="btn btn-block btn-success mt-3 py-2">
+                <input type="hidden" name="id" value="{{$transaction->id}}">
+                <button type="submit" class="btn btn-block btn-success">
                   I Have Made Payment
-                </a>
+                </button>
               </div>
+            </form>
               <div class="join-container">
                 <button class="btn btn-block btn-primary mt-3 py-2" id="pay-button">
                   MIDTRANS
