@@ -17,7 +17,7 @@
                                 <div style="border: 1px solid black; display: inline-block; width: 10rem; margin: 1rem; padding: 1rem; border-radius: 30px">
                                     <h4 class="text-center">{{$list->name}}</h4>
                                     <div class="text-center">
-                                        <button type="button" class="btn btn-primary" style="display: inline-block; margin-top: 25px">Manage</button>
+                                        <a  href="{{route('video.list',$list->id)}}" type="button" class="btn btn-primary" style="display: inline-block; margin-top: 25px">Manage</a>
                                     </div>
                                 </div>
                             @endforeach
