@@ -40,11 +40,11 @@
                                 Lengkapi Form
                             </button>
                             @elseif($hasil->first()->status == 1)
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-warning">
                                 Menunggu Konfirmasi
                             </button>
                             @elseif($hasil->first()->status == 2)
-                            <a href="{{route('kelas', $data->id)}}" class="btn btn-primary">
+                            <a href="{{route('kelas', $data->id)}}" class="btn btn-success">
                                 Masuk Kelas
                             </a>
                             @endif

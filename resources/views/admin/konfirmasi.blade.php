@@ -85,9 +85,9 @@
 
             </table>
             {{$transaksi->links()}}
-            <div id="modal01" class="modal" onclick="this.style.display='none'">
+            <div id="modal01" class="modal" onclick="this.style.display='none'" style="background-color: #00000066">
                 <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <div class="modal-content" >
+                <div class="modal-content" style="width: 320px; height: 320px; position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto">
                   <img id="img01" class="img-fluid" style="width:auto; height:auto; display:block;">
                 </div>
               </div>

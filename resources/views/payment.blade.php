@@ -76,13 +76,7 @@
                   <tr>
                     <th width="50%">Transaction ID</th>
                     <td width="50%" class="text-right">
-                      {{$transaction->name}}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th width="50%">Trip Price</th>
-                    <td width="50%" class="text-right">
-                      
+                      {{$transaction->id}}
                     </td>
                   </tr>
                   <tr>
@@ -104,8 +98,11 @@
     
                 <hr />
                 <h2>Payment Instructions</h2>
-                <p class="payment-instructions">
+                <p class="payment-instructions btn-success p-2" style="border-radius: 8px">
                   Bayar Ke Rekening yang tersedia lalu upload bukti pembayaran.
+                </p>
+                <p class="payment-instructions btn-success p-2" style="border-radius: 8px">
+                  Pembayaran Akan dikonfirmasi 1x24 jam
                 </p>
                 <div class="bank">
                   <div class="bank-item pb-3">
@@ -120,6 +117,8 @@
                         0881 8829 8800
                         <br />
                         Bank Central Asia
+                        <br/>
+                        <img style="height: 50px" src="{{asset("assets/images/bca.png")}}" alt="">
                       </p>
                     </div>
                     <div class="clearfix"></div>
@@ -136,6 +135,8 @@
                         0899 8501 7888
                         <br />
                         Bank HSBC
+                        <br/>
+                        <img style="height: 50px" src="{{asset("assets/images/hsbc.png")}}" alt="">
                       </p>
                     </div>
                     <div class="clearfix"></div>
@@ -146,7 +147,7 @@
 
                 @csrf
                 <div class="form-group">
-                <label for="">Photo</label>
+                <label for=""></label>
                 <div class="input-group">
                     <input type="file" name="photo" class="form-control">
                 </div>
@@ -165,11 +166,11 @@
                 </button>
               </div>
             </form>
-              <div class="join-container">
+              {{-- <div class="join-container">
                 <button class="btn btn-block btn-primary mt-3 py-2" id="pay-button">
                   MIDTRANS
                 </button>
-              </div>
+              </div> --}}
               <div class="text-center mt-3">
                 <a href="" class="btn btn-block btn-danger mt-3 py-2">
                   Cancel Booking
@@ -260,7 +261,7 @@
   </script>
   @endsection
   
-  @push('prepend-style')
+  {{-- @push('prepend-style')
   <link rel="stylesheet" href="{{ url('libraries/gijgo/css/gijgo.min.css') }}" />
 @endpush
 
@@ -277,4 +278,4 @@
       });
     });
   </script>
-@endpush
+@endpush --}}

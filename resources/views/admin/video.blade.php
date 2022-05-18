@@ -6,8 +6,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             
-            <h1 class="mt-5 mr-3">MANAGE KELAS {{$title->name}}</h1>
-            <a href="{{route('video.load')}}" class="btn btn-primary">+ Tambah Video</a>
+            <h1 class="mt-3 mr-3 text-center" style="font-size: 30pt">Manage Kelas {{$title->name}}</h1>
+            <a href="{{route('video.load')}}" class="btn btn-primary float-right">+ Tambah Video</a>
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead class="thead-light">

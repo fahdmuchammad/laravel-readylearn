@@ -17,16 +17,16 @@
                 <iframe class="video-iframe" src="{{$detail->video}}?autoplay=1" allow="autoplay" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="col-md-4"> 
-                <div class="row">
+                <div class="row px-3" style="overflow-y: scroll;">
                     <h3 class="ml-3" style="color: white">Kumpulan Materi {{$namasub}}</h3>
                     @foreach($lainnya as $data)
-                    <div class="col-md-12 mb-3">
+                    <div class="mb-3" style="width: 100%">
                         <a href="{{route('kelas.detail',[$paket,$subjek,$data->id])}}">
                             <Button class="pilihkelas">{{$data->name}}</Button>
                         </a>
                     </div>
-                
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
             </div>
