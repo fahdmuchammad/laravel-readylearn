@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-
-<div class="container">
+<div class="body" style="background-image: url({{asset('assets/images/awan.svg')}}); height: 100%; background-repeat: no-repeat; background-size: cover; color:white;">
+<div class="container  pt-5">
     <div class="row">
         <div class="col-md-12">
             <div class="error-template">
@@ -19,5 +19,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

@@ -14,7 +14,7 @@
         <div class="col-md-12" style="margin-top: 2rem">
             <div class="row">
             <div class="col-md-8 video-container">
-                <iframe class="video-iframe" src="{{$detail->video}}?autoplay=1" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+                <iframe class="video-iframe" src="{{$detail->video}}?autoplay=1" allow="autoplay" frameborder="0" allowfullscreen style="height: 500px"></iframe>
             </div>
             <div class="col-md-4"> 
                 <div class="row px-3" style="overflow-y: scroll;">

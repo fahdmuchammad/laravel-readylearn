@@ -25,7 +25,7 @@
                     </div>
                     <div class="card-body">
                       <ul class="list-unstyled mt-3 mb-4">
-                        <img></>
+                        <img>
                         <a href="{{route('kelas.detail',[$paket,$data->id,1])}}" class="btn btn-primary">Buka Kelas</a>
                       </ul>
                       

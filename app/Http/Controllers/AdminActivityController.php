@@ -31,6 +31,9 @@ class AdminActivityController extends Controller
         $user_id = Transaction::where('id', $request->id)->first()->user_id;
         $data = [
             'paket' => $transaction->package->name,
+            'gross' => $transaction->gross_amount,
+            'id' => $transaction->id,
+            'username' => $transaction->user->name,
             // 'password' => $user->password,
         ];
         $email = User::findorfail($user_id);

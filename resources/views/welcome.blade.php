@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Readylearn</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="{{ asset('assets/images/logo.png') }}" rel="icon" type="image/png">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
         <!-- Styles -->
@@ -90,7 +91,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light navbar-laravel border border-bottom-2">
+        <nav class="navbar navbar-expand-lg navbar-light border border-bottom-2">
             <div class="container">
                 <img class="mb-2" src={{ asset('assets/images/logo.png') }} alt="" width="50" height="40">
                 <a class="navbar-brand" href="{{route ('welcome')}}" style="color: blue; font-size: 20pt">Ready<span style="color: orange">Learn</span></a>
@@ -108,11 +109,15 @@
                                 <a class="nav-link" href="{{ route('register') }}">Register</a>
                             </li>
                         @else
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('paket.list') }}">ReVid</a>
                         </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <img class="nav-link" src="https://ui-avatars.com/api/?name={{Auth::user()->name}}&rounded=true&size=40" style="border-radius: 4px">
                             </li>
                         @endguest
                     </ul>
@@ -180,12 +185,18 @@
                   </div>
                   <div class="carousel-item">
                     <div class="text-center">
-                        <h1 class="pt-4">ini testimoni Kedua</h1>
+                        <div class="text-center" style="padding: 3rem 30%;">
+                        <h1>ini testimoni Kedua</h1>
+                        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
+                        </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="text-center">
-                        <h1 class="pt-4">ini testimoni Ketiga</h1>
+                        <div class="text-center" style="padding: 3rem 30%;">
+                        <h1>ini testimoni Ketiga</h1>
+                        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
+                        </div>
                     </div>
                   </div>
                 </div>
