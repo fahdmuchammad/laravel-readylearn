@@ -79,7 +79,7 @@ class PackageController extends Controller
             'vtweb' => [],
         ];
         $snap_token = Snap::getSnapToken($midtrans_params);
-        $data->update(['status' => '1']);
+        // $data->update(['status' => '1']);
 
         return view('payment', compact('transaction', 'snap_token'));
     }

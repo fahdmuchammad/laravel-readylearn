@@ -45,6 +45,7 @@
                     </tbody>
                 </table>
             </div>
+            {{$video->links()}}
             {{-- <div class="card">
                 <div class="card-header">
                     <div class="row">

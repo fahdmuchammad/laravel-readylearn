@@ -61,7 +61,7 @@ class AdminActivityController extends Controller
     public function listvideo($id)
     {
         $title = Subject::where('id', $id)->first();
-        $video = Video::where('subject_id', $id)->get(); //Get tabel paket
+        $video = Video::where('subject_id', $id)->paginate(5); //Get tabel paket
         return view('admin.video', compact('video', 'title'));
     }
     public function loadvideo()

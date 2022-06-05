@@ -14,11 +14,12 @@
         <div class="col-md-12" style="margin-top: 2rem">
             <div class="row">
             <div class="col-md-8 video-container">
-                <iframe class="video-iframe" src="{{$detail->video}}?autoplay=1" allow="autoplay" frameborder="0" allowfullscreen style="height: 500px"></iframe>
+                <iframe class="video-iframe" src="{{$detail->video}}?autoplay=1" allow="autoplay" frameborder="0" allowfullscreen style="height: 400px"></iframe>
             </div>
             <div class="col-md-4"> 
                 <div class="row px-3" style="overflow-y: scroll;">
                     <h3 class="ml-3" style="color: white">Kumpulan Materi {{$namasub}}</h3>
+                    <div class="col-12" style="height:400px; overflow:auto">
                     @foreach($lainnya as $data)
                     <div class="mb-3" style="width: 100%">
                         <a href="{{route('kelas.detail',[$paket,$subjek,$data->id])}}">
@@ -26,6 +27,7 @@
                         </a>
                     </div>
                     @endforeach
+                </div>
                 </div>
             </div>
         </div>
