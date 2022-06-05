@@ -1,0 +1,8 @@
+
+deployment:
+ 
+ tasks:
+ 
+ - export DEPLOYPATH=/home/readyle1/repositories/laravel-readylearn
+ 
+ - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
